@@ -4,21 +4,21 @@
       <div class="flex flex-col md:flex-row items-center justify-between gap-12">
         <div class="md:w-2/3 text-center md:text-left">
           <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
-            Sahar Eitam
+            Yehonatan Yamin
           </h1>
           <h2 class="text-xl md:text-2xl text-gray-600 mb-6">
             Software & Information Systems Engineering Student
           </h2>
           
           <p class="text-lg text-gray-700 mb-8 leading-relaxed max-w-xl">
-            Dedicated 3rd year Software & Information Systems Engineering student at Ben Gurion University 
+            Dedicated 4rd year Software & Information Systems Engineering student at Ben Gurion University 
             with a strong foundation in Full Stack development, machine learning, and software architecture. 
             Passionate about creating scalable and efficient solutions to complex problems.
           </p>
           
           <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
             <a
-              href="https://github.com/sahareitam"
+              href="https://github.com/Yaminye"
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors"
@@ -29,7 +29,7 @@
               <span>GitHub</span>
             </a>
             <a
-              href="https://linkedin.com/in/sahar-eitam"
+              href="https://www.linkedin.com/in/yehonatan-yamin-5aaaa3303/"
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
@@ -68,7 +68,7 @@
           <div class="w-full h-full rounded-full overflow-hidden border-4 border-white shadow-lg">
             <img
               :src="profileImage"
-              alt="Sahar Eitam"
+              alt="Yehonatan Yamin"
               class="w-full h-full object-cover"
             />
           </div>
@@ -93,7 +93,7 @@ export default {
       document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
     },
     copyEmail() {
-      navigator.clipboard.writeText('sahar283@gmail.com');
+      navigator.clipboard.writeText('yehonatan19y@gmail.com');
       alert('Email copied to clipboard!');
     }
   }

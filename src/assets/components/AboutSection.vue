@@ -25,13 +25,13 @@
                   B.Sc in Software & Information Systems Engineering
                 </h4>
                 <p class="text-lg text-blue-600 font-medium mb-2">Ben-Gurion University</p>
-                <p class="text-gray-700">Currently in third year with 3 semesters remaining</p>
+                <p class="text-gray-700">Starting my 4rd year in 26/10/2025</p>
                 <div class="flex flex-wrap items-center gap-3 mt-3">
                   <div class="px-3 py-1 bg-blue-100 text-blue-800 font-medium rounded-full">
-                    GPA: 86.33
+                    GPA: 89
                   </div>
                   <div class="px-3 py-1 bg-green-100 text-green-800 font-medium rounded-full">
-                    Last semester: 90.6
+                    Last semester: 93.3
                   </div>
                 </div>
                 
@@ -190,7 +190,7 @@
             <!-- Military Summary - Always visible -->
             <div @click="toggleMilitaryDetails" class="bg-gray-50 p-4 rounded-lg border border-gray-300 cursor-pointer mb-4">
               <h4 class="text-xl font-semibold text-gray-900 mb-3 flex justify-between items-center">
-                Sayeret Givati Unit
+                5252 ZIK
                 <!-- Mobile toggle icon -->
                 <svg v-if="isMobile" xmlns="http://www.w3.org/2000/svg" 
                     class="w-5 h-5 ml-2 transition-transform text-gray-700"
@@ -408,18 +408,13 @@ export default {
       educationCourses: {
         inProgress: [
           {
-            name: "Software Quality Engineering",
-            description: "Unit Testing, Integration Testing, Selenium, Cucumber, Quality Metrics, TDD",
+            name: "LangChain and LangGraph by building real world AI Agents",
+            description: "LangChain, LangGraph, RAG, Python, OpenAI API, LangSmith, Ollama",
             isOpen: false
           },
           {
             name: "Computer and Network Security",
             description: "Cryptography, Authentication, Security Protocols, Malicious Code Detection, Firewalls",
-            isOpen: false
-          },
-          {
-            name: "Data communication",
-            description: "Understanding of network protocols (TCP/IP, UDP, HTTP), packet/circuit switching",
             isOpen: false
           },
           {
@@ -442,82 +437,69 @@ export default {
             description: "Data-driven decisions, statistical analysis, optimization techniques",
             isOpen: false
           },
-          {
-            name: "Data Science Ethics",
-            description: "Responsible AI, Privacy, Bias mitigation, Ethical considerations in data collection",
-            isOpen: false
-          }
         ],
         completed: [
           {
-            name: "Artificial Intelligence",
-            grade: 95,
-            description: "Reinforcement Learning, Deep RL, Bayesian Networks",
-            isOpen: false
-          },
-          {
-            name: "Machine Learning",
-            grade: 89,
-            description: "Neural Networks, Ensemble Methods, SVM",
-            isOpen: false
-          },
-          {
-            name: "Operating Systems",
-            grade: 95,
-            description: "Process Management, Virtual Memory, Multi-threading",
+            name: "Data communication",
+            grade: 99,
+            description: "OSI model, TCP, UDP, HTTP, VLAN, Data Center",
             isOpen: false
           },
           {
             name: "Object Oriented Programming",
+            grade: 97,
+            description: "Java, Design Patterns, SOLID Principles",
+            isOpen: false
+          },
+          {
+            name: "Artificial Intelligence",
+            grade: 96,
+            description: "Reinforcement Learning, Deep RL, Bayesian Networks",
+            isOpen: false
+          },
+                              {
+            name: "Advanced Programming",
             grade: 94,
-            description: "Design Patterns, SOLID Principles",
+            description: "C/C++, memory management, Pointers, MakeFile",
             isOpen: false
           },
           {
-            name: "Analysis and Design of Software Systems",
-            grade: 88,
-            description: "Architecture, UML, OCL",
+            name: "Advanced topics in programming",
+            grade: 93,
+            description: "Java, Client-Server Architecture",
             isOpen: false
           },
-          {
+                    {
             name: "Elements of Computing Systems",
-            grade: 90,
+            grade: 93,
             description: "CPU components, MIPS assembly, computer architecture",
             isOpen: false
           },
           {
-            name: "Human-Computer Interface",
-            grade: 86,
-            description: "Usability, Prototyping, Eye Tracking, Accessibility",
+            name: "Machine Learning",
+            grade: 91,
+            description: "Python, Neural Networks, Ensemble Methods, SVM",
             isOpen: false
           },
-          {
+                    {
             name: "Data Structures",
+            grade: 91,
             description: "Arrays, Linked Lists, Trees, Graphs, Hash Tables",
             isOpen: false
           },
           {
-            name: "Algorithms",
-            description: "Sorting, Searching, Dynamic Programming, Greedy Algorithms",
+            name: "Operating Systems",
+            grade: 90,
+            description: "C#, Process Management, Virtual Memory, Multi-threading",
             isOpen: false
           },
-          {
-            name: "Databases",
-            description: "SQL, Normalization, Query Optimization, Transactions",
-            isOpen: false
-          },
-          {
-            name: "Introduction to Computer Science",
-            description: "Programming fundamentals, Computational thinking",
-            isOpen: false
-          }
         ]
       },
 
       skillsCategories: [
         {
           name: "Languages",
-          skills: ["Python (Primary)", "Java", "C/C++", "Go", "C#", "JavaScript"],
+          skills: ["Python (Primary)", "C/C++ (Primary)", "Java", "Go", "C#", "JavaScript"],
           isOpen: false
         },
         {
@@ -532,7 +514,7 @@ export default {
         },
         {
           name: "Cloud & DevOps",
-          skills: ["GCP", "App Engine", "Git", "GitHub", "Docker"],
+          skills: ["App Engine", "Git", "GitHub", "Docker"],
           isOpen: false
         },
         {
@@ -546,13 +528,13 @@ export default {
           isOpen: false
         },
         {
-          name: "AI & ML",
-          skills: ["Neural Networks", "Reinforcement Learning", "LangChain", "RAG"],
+          name: "AI",
+          skills: ["Reinforcement Learning", "LangChain","LangGraph","RAG","OpenAI API","LangSmith","Ollama"],
           isOpen: false
         },
         {
-          name: "Scientific Programming",
-          skills: ["NumPy", "Pandas"],
+          name: "Data Science & ML & Computer Vison",
+          skills: ["NumPy", "Pandas","Sklearn","Scipy","TensorFlow","PySpark","CNN"],
           isOpen: false
         },
         {
@@ -593,12 +575,12 @@ export default {
     ],
     militaryService: [
       {
-        title: "Combat Soldier and Commander",
-        unit: "Sayeret Givati Unit",
+        title: "UAV's System Operator",
+        unit: "5252 ZIK",
         duties: [
-          "Led complex operations and managed team training",
-          "Emphasized leadership and collaboration",
-          "Demonstrated high level of personal responsibility"
+          "Took part in hundreds of missions & special operations that had a direct impact on the security of the country",
+          "Worked under pressure and continuous fatigue in mission-critical autonomous systems",
+          "Experience with real-time data analysis and autonomous system operation"
         ],
         isOpen: false
       }

@@ -139,7 +139,7 @@ The portfolio implements a comprehensive responsive design approach:
 ## 🔗 Live Demo
 
 The live version of this portfolio is available at:
-[https://sahareitam.github.io/Personal-website/](https://sahareitam.github.io/Personal-website/)
+[https://yaminye.github.io/My-Web/](https://yaminye.github.io/My-Web/)
 
 ## 📄 License
 

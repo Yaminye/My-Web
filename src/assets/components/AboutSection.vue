@@ -325,7 +325,7 @@
             <!-- Volunteering Summary - Always visible -->
             <div @click="toggleVolunteeringDetails" class="bg-gray-50 p-4 rounded-lg border border-gray-300 cursor-pointer mb-4">
               <h4 class="text-xl font-semibold text-gray-900 mb-3 flex justify-between items-center">
-                Community & Educational Involvement
+                Reserved duty
                 <!-- Mobile toggle icon -->
                 <svg v-if="isMobile" xmlns="http://www.w3.org/2000/svg" 
                     class="w-5 h-5 ml-2 transition-transform text-gray-700"
@@ -334,7 +334,7 @@
                 </svg>
               </h4>
               
-              <p class="text-blue-600 mb-2">Academic tutoring and community support</p>
+              
               
               <!-- Show toggle text only on mobile -->
               <div class="md:hidden mt-2">
@@ -370,6 +370,10 @@
                       <p class="text-gray-600 bg-blue-100 p-3 rounded-lg border-l-6 border-blue-500">
                         {{ volunteer.description }}
                       </p>
+                      <img v-if="volunteer.imageUrl" 
+                          :src="volunteer.imageUrl" 
+                          alt="Reserve Duty" 
+                          class="mt-4 rounded-lg shadow-md w-full object-cover max-h-72">
                     </div>
                     
                     <div v-if="index < volunteering.length - 1" class="pt-4 border-t border-gray-200 mt-4"></div>
@@ -385,6 +389,7 @@
 </template>
 
 <script>
+import reserveDutyImage from '@/assets/reserve_duty.jpeg';
 export default {
   name: 'AboutSection',
   data() {
@@ -589,19 +594,14 @@ export default {
     militarySkillsOpen: false,
 
     volunteering: [
-      {
-        title: "Mathematics Tutor",
-        organization: "\"Perach Mathematics\" Project",
-        description: "Tutored high school students in 5-unit mathematics, helping them prepare for the Bagrut exams and develop strong problem-solving skills.",
-        isOpen: false
-      },
-      {
-        title: "Community Support Volunteer",
-        organization: "Community Anchor Youth Village",
-        description: "Supported at-risk youth in enrichment programs, providing guidance and mentorship to help them develop academic and life skills.",
-        isOpen: false
-      }
-    ],
+  {
+    title: "",
+    organization: "Israeli Air Force",
+    description: "Voluntarily served hundreds of days of military reserve duty, both before and since October 7th.",
+    imageUrl: reserveDutyImage,
+    isOpen: false
+  },
+],
     additionalSkills: [
       "Problem analysis and solution design",
       "Collaborative project implementation",

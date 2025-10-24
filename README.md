@@ -1,4 +1,4 @@
-# Sahar Eitam Portfolio Website
+# Yehonatan Yamin Portfolio Website
 
 A responsive personal portfolio website built with Vue.js 3 showcasing my educational background, technical skills, work experience, and projects.
 

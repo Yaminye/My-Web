@@ -471,7 +471,7 @@ export default {
           {
             name: "Advanced topics in programming",
             grade: 93,
-            description: "Java, Client-Server Architecture",
+            description: "Java, Client-Server Architecture, Design Patterns, SOLID Principles",
             isOpen: false
           },
                     {

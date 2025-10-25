@@ -10,7 +10,7 @@ git init
 git add -A
 git commit -m 'deploy'
 
-#https://sahareitam.github.io/Personal-website/
-git push -f https://github.com/sahareitam/Personal-website.git master:gh-pages
+#https://yaminye.github.io/My-Web/
+git push -f https://github.com/Yaminye/My-Web.git master:gh-pages
 
 cd -

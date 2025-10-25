@@ -86,7 +86,7 @@ portfolio-website/
 ### Installation
 1. Clone the repository:
    ```
-   git clone https://github.com/sahareitam/Personal-website.git
+   git clone https://github.com/Yaminye/My-Web.git
    cd Personal-website
    ```
 
@@ -147,4 +147,4 @@ This project is available for viewing and inspiration. Feel free to explore the 
 
 ---
 
-© 2025 Sahar Eitam. All rights reserved.
+© 2025 Yehonatan Yamin. All rights reserved.

@@ -6,7 +6,7 @@
     <ProjectsSection id="projects" />
     <ContactSection id="contact" />
     <footer class="py-6 text-center text-gray-600">
-      <p>© {{ new Date().getFullYear() }} Sahar Eitam. All rights reserved.</p>
+      <p>© {{ new Date().getFullYear() }} Yehonatan Yamin. All rights reserved.</p>
     </footer>
   </div>
 </template>

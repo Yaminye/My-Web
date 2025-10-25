@@ -218,50 +218,37 @@ export default {
       selectedProject: null, // For the modal
       projects: [
         {
-          title: "AI Documentation Helper",
-          description: "Developing an intelligent search system using LangChain and RAG architecture. Implementing vector similarity algorithms and creating contextual retrieval from large documentation sets.",
-          tech: ["LangChain", "RAG", "Python", "NumPy", "Pinecone", "FAISS"],
-          github: "#",
-          inProgress: true
+          title: "Scratch Detection Assignment - Deep learning (CNN)",
+          description: "detecting scratches on semiconductor wafer maps using deep learning(CNN). The solution transforms die-level manufacturing data into 72×72 image grids and applies a U-Net segmentation model to predict scratch locations. The assignment includes data exploration, preprocessing, model building, evaluation, and final submission generation.",
+          tech: ["Python","NumPy", "Pandas","Sklearn","Scipy","TensorFlow","PySpark"],
+          github: "https://github.com/Yaminye/Wafer-Scratch-Detection-",
+          inProgress: false
         },
         {
         title: "Space Invaders Game",
         description: "Classic arcade-style space shooter game developed with vanilla JavaScript. Features include enemy formations, increasing game difficulty, custom spaceship colors, score tracking, and a personal leaderboard system.",
         tech: ["JavaScript", "HTML5", "CSS3", "Local Storage API", "Canvas API"],
-        github: "https://github.com/wed-2023/assignment2-318283116_314743485_assignment2",
-        demo: "https://wed-2023.github.io/assignment2-318283116_314743485_assignment2/",
+        github: "https://github.com/WED-2023/assignment2-206917510_206511727_assignment2",
+        demo: "https://wed-2023.github.io/assignment2-206917510_206511727_assignment2/",
         },
         {
-          title: "Chrome Keyboard Fixer",
-          description: "Chrome extension with Python Flask backend on GCP. Implements RESTful API with comprehensive error handling, concurrency management, and security best practices including input validation and IP-based rate limiting.",
-          tech: ["JavaScript", "Python", "Flask", "GCP", "REST API"],
-          github: "https://github.com/sahareitam/chrome-keyboard-fixer",
+        title: "The Maze",
+        description: "Generating, compressing, transmitting and solving mazes over a client-server architecture. Implements multiple maze generators and search algorithms, plus custom compressor/decompressor streams and JUnit test suites.",
+        tech: ["Java", "Client-Server", "JUnit", "Design Patterns", "SOLID Principles"],
+        github: "https://github.com/Yaminye/Maze-project"
         },
         {
-          title: "Task Management System",
-          description: "Task management system using Go and Docker. Features RESTful API, Goroutines for concurrency, sync.Cond for task synchronization, and CLI client interface.",
-          tech: ["Go", "Docker", "REST API", "CLI"],
-          github: "https://github.com/sahareitam/task-manager",
+          title: "UDP-TCP-speed-test",
+          description: "Network Speed Test Client-Server This project contains a client-server implementation for testing ---network speed over UDP and TCP. The server listens for client requests and transmits data over both protocols to measure throughput and latency.",
+          tech: ["Python", "Data Communication", "Data Structures", "Client-Server","TCP","UDP"],
+          github: "https://github.com/Yaminye/UDP-TCP-speed-test"
         },
-        {
-          title: "Grandmother Website Project",
-          description: "A personal website dedicated to Grandma Sara, built as part of a Web Development Environments course at Ben-Gurion University.",
-          tech: ["HTML5", "CSS3", "jQuery", "Facebook SDK"],
-          github: "https://github.com/sahareitam/318283116",
-          demo: "https://wed-2023.github.io/318283116/"
-        },
-        {
-          title: "Personal Portfolio Website",
-          description: "A responsive personal portfolio website showcasing academic background, military service, and projects. Developed using Vue.js and Tailwind CSS as part of a university web development assignment.",
-          tech: ["Vue.js", "Tailwind CSS", "JavaScript", "GitHub Pages"],
-          github: "https://github.com/sahareitam/Personal-website",
-          demo: "https://sahareitam.github.io/Personal-website/"
-        },
+
         {
           title: "LeetCode Solutions",
           description: "A public repository containing algorithmic solutions to problems from LeetCode, written in Python and organized by category and difficulty.",
-          tech: ["Python", "Algorithms", "Data Structures", "C++", "GO"],
-          github: "https://github.com/sahareitam/LeetCode"
+          tech: ["Python", "C/C++", "Algorithms", "Data Structures"],
+          github: "https://github.com/Yaminye/LeetCode"
         }
       ],
 

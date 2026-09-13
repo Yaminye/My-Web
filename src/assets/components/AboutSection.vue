@@ -179,6 +179,82 @@
           </div>
         </div>
 
+        <!-- Work Experience -->
+        <div class="overflow-hidden border-0 shadow-lg hover:shadow-xl rounded-lg transition-shadow duration-300">
+          <div class="bg-gradient-to-r from-gray-900 to-gray-800 py-4 px-6 border-b">
+            <div class="flex justify-center items-center gap-3">
+              <h3 class="text-xl font-semibold text-black">Work Experience</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <!-- Work Summary - Always visible -->
+            <div @click="toggleWorkDetails" class="bg-gray-50 p-4 rounded-lg border border-gray-300 cursor-pointer mb-4">
+              <h4 class="text-xl font-semibold text-gray-900 mb-3 flex justify-between items-center">
+                AI &amp; DevOps Engineer @ Texas Instruments
+                <svg v-if="isMobile" xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5 ml-2 transition-transform text-gray-700"
+                    :class="{'transform rotate-180': workDetailsOpen}">
+                  <polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2"></polyline>
+                </svg>
+              </h4>
+
+              <p class="text-blue-600 mb-2">Currently building AI tooling and CI/CD infrastructure</p>
+
+              <!-- Show toggle text only on mobile -->
+              <div class="md:hidden mt-2">
+                <span class="text-blue-600 flex items-center">
+                  {{ workDetailsOpen ? 'Show less' : 'Show details' }}
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                      class="w-5 h-5 ml-1 transition-transform"
+                      :class="{'transform rotate-180': workDetailsOpen}">
+                    <polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <!-- Work Details - Hidden on mobile by default -->
+            <div v-show="!isMobile || workDetailsOpen">
+              <div v-for="(job, index) in workExperience" :key="index"
+                  class="bg-gray-50 p-4 rounded-lg mb-4 border border-gray-300">
+                <h4 @click="toggleWorkExperience(job)"
+                    class="text-xl font-semibold text-gray-900 mb-1 flex justify-between items-center"
+                    :class="{'cursor-pointer': isMobile}">
+                  {{ job.title }}
+                  <svg v-if="isMobile" xmlns="http://www.w3.org/2000/svg"
+                      class="w-4 h-4 ml-2 transition-transform text-gray-700"
+                      :class="{'transform rotate-180': job.isOpen}">
+                    <polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2"></polyline>
+                  </svg>
+                </h4>
+
+                <div v-show="!isMobile || job.isOpen">
+                  <p class="text-blue-600 mb-1">{{ job.company }}</p>
+                  <div class="flex flex-wrap items-center gap-2 mb-4 text-sm text-gray-600">
+                    <span v-if="job.period">{{ job.period }}</span>
+                    <span v-if="job.period && job.location">·</span>
+                    <span v-if="job.location">{{ job.location }}</span>
+                    <span v-if="job.type">·</span>
+                    <span v-if="job.type">{{ job.type }}</span>
+                  </div>
+                  <ul class="space-y-2 text-gray-700">
+                    <li v-for="(item, i) in job.responsibilities" :key="i" class="flex items-start gap-2">
+                      <span class="text-blue-500 mt-1">•</span>
+                      <span>{{ item }}</span>
+                    </li>
+                  </ul>
+                  <div v-if="job.skills && job.skills.length" class="flex flex-wrap gap-2 mt-4">
+                    <span v-for="(skill, i) in job.skills" :key="i"
+                        class="bg-gray-200 text-gray-800 text-xs font-bold py-2 px-4 rounded-full border border-gray-300 hover:shadow-md transition-shadow">
+                      {{ skill }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Military Service -->
         <div class="overflow-hidden border-0 shadow-lg hover:shadow-xl rounded-lg transition-shadow duration-300">
           <div class="bg-gradient-to-r from-gray-900 to-gray-800 py-4 px-6 border-b">
@@ -550,10 +626,25 @@ export default {
       ],
       workExperience: [
       {
+        title: "AI & DevOps Engineer",
+        company: "Texas Instruments",
+        location: "Israel",
+        type: "Part-time",
+        period: "10/2025 – Present",
+        responsibilities: [
+          "AI Commit Generator: built an interactive AI tool that standardizes code documentation for a 100 person global engineering team (IL & IN), automating the workflow from Jira ID input to LLM-based diff chunking and summary generation",
+          "DevOps & Infrastructure: established a CI/CD ecosystem from scratch, including server provisioning, VM orchestration, and resource allocation",
+          "Shared Claude Skills Marketplace: built an internal platform where engineers publish and reuse Claude Skills, with setup guides for team-specific MCPs (Jira, Bitbucket, Confluence, Jenkins, Mail), cutting repeated onboarding work across global teams"
+        ],
+        skills: ["LangChain", "LangGraph", "MCP", "CI/CD", "Jenkins", "Docker", "Python"],
+        isOpen: false
+      },
+      {
         title: "Operations & Property Manager",
         company: "OurPlace",
         location: "Tel Aviv, Israel",
         type: "Full-time",
+        period: "",
         responsibilities: [
           "Managed operational aspects of multiple residential buildings, including maintenance, contractor coordination, and budget management",
           "Served as primary point of contact for American tenants in Israel for internship programs, helping with local procedures and resolving issues",
@@ -568,6 +659,7 @@ export default {
         company: "Eitam Liad Construction Company",
         location: "",
         type: "Part-time",
+        period: "",
         responsibilities: [
           "Oversaw construction projects (budgeting, quality, timelines)",
           "Supervised on-site teams and coordinated with contractors",

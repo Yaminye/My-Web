@@ -7,13 +7,14 @@
             Yehonatan Yamin
           </h1>
           <h2 class="text-xl md:text-2xl text-gray-600 mb-6">
-            Software & Information Systems Engineer
+            AI & DevOps Engineer @ Texas Instruments
           </h2>
 
           <p class="text-lg text-gray-700 mb-8 leading-relaxed max-w-xl">
-            Software & Information Systems Engineering graduate of Ben Gurion University
-            with a strong foundation in Full Stack development, machine learning, and software architecture.
-            Passionate about creating scalable and efficient solutions to complex problems.
+            Software & Information Systems Engineering graduate of Ben Gurion University,
+            currently an AI & DevOps Engineer at Texas Instruments with hands-on experience
+            in AI/ML applications and LLM frameworks. Passionate about creating scalable and
+            efficient solutions to complex problems.
           </p>
           
           <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-8">

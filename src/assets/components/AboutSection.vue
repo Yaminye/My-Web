@@ -122,65 +122,6 @@
           </div>
         </div>
 
-        <!-- Skills -->
-        <div class="overflow-hidden border-0 shadow-lg hover:shadow-xl rounded-lg transition-shadow duration-300">
-          <div class="bg-gradient-to-r from-gray-900 to-gray-800 py-4 px-6 border-b">
-            <div class="flex justify-center items-center gap-3">
-              <h3 class="text-xl font-semibold text-black">Technical Skills</h3>
-            </div>
-          </div>
-          <div class="p-6">
-            <div v-if="isMobile" class="bg-gray-50 p-4 rounded-lg border border-gray-300 cursor-pointer" @click="toggleSkillsDetails">
-              <div class="flex justify-between items-center">
-                <h4 class="font-bold text-gray-900">Skills Overview</h4>
-                <svg xmlns="http://www.w3.org/2000/svg" 
-                    class="w-5 h-5 transition-transform"
-                    :class="{'transform rotate-180': skillsDetailsOpen}">
-                  <polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2"></polyline>
-                </svg>
-              </div>
-              
-              <div class="mt-3 text-blue-600" v-if="!skillsDetailsOpen">
-                <span class="flex items-center">
-                  View skill categories
-                  <svg xmlns="http://www.w3.org/2000/svg" 
-                      class="w-4 h-4 ml-1">
-                    <polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2"></polyline>
-                  </svg>
-                </span>
-              </div>
-            </div>
-
-            <div v-show="!isMobile || skillsDetailsOpen" :class="{'mt-4': isMobile && skillsDetailsOpen}">
-              <div class="grid md:grid-cols-3 gap-6">
-                <div v-for="category in skillsCategories" :key="category.name" 
-                    class="bg-gray-50 p-4 rounded-lg border border-gray-300 hover:shadow-md transition-shadow skills">
-                  
-                  <h4 @click="toggleSkillCategory(category)" 
-                      class="font-bold mb-4 text-gray-900 border-b border-gray-200 pb-2 mb-4 flex justify-between items-center"
-                      :class="{'cursor-pointer': isMobile}">
-                    {{ category.name }}
-                    <svg v-if="isMobile" xmlns="http://www.w3.org/2000/svg" 
-                        class="w-4 h-4 ml-2 transition-transform text-gray-700"
-                        :class="{'transform rotate-180': category.isOpen}">
-                      <polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2"></polyline>
-                    </svg>
-                  </h4>
-                  
-                  <div class="flex flex-wrap gap-2" v-show="!isMobile || category.isOpen">
-                    <span
-                      v-for="skill in category.skills"
-                      :key="skill"
-                      class="bg-green-400 text-gray-800 text-xs font-bold py-1 px-4 rounded-full border border-green-100 hover:shadow-md transition-shadow">
-                      {{ skill }}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- Work Experience -->
         <div class="overflow-hidden border-0 shadow-lg hover:shadow-xl rounded-lg transition-shadow duration-300">
           <div class="bg-gradient-to-r from-gray-900 to-gray-800 py-4 px-6 border-b">
@@ -252,6 +193,65 @@
                   <div v-if="job.skills && job.skills.length" class="flex flex-wrap gap-2 mt-4">
                     <span v-for="(skill, i) in job.skills" :key="i"
                         class="bg-gray-200 text-gray-800 text-xs font-bold py-2 px-4 rounded-full border border-gray-300 hover:shadow-md transition-shadow">
+                      {{ skill }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="overflow-hidden border-0 shadow-lg hover:shadow-xl rounded-lg transition-shadow duration-300">
+          <div class="bg-gradient-to-r from-gray-900 to-gray-800 py-4 px-6 border-b">
+            <div class="flex justify-center items-center gap-3">
+              <h3 class="text-xl font-semibold text-black">Technical Skills</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div v-if="isMobile" class="bg-gray-50 p-4 rounded-lg border border-gray-300 cursor-pointer" @click="toggleSkillsDetails">
+              <div class="flex justify-between items-center">
+                <h4 class="font-bold text-gray-900">Skills Overview</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                    class="w-5 h-5 transition-transform"
+                    :class="{'transform rotate-180': skillsDetailsOpen}">
+                  <polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2"></polyline>
+                </svg>
+              </div>
+              
+              <div class="mt-3 text-blue-600" v-if="!skillsDetailsOpen">
+                <span class="flex items-center">
+                  View skill categories
+                  <svg xmlns="http://www.w3.org/2000/svg" 
+                      class="w-4 h-4 ml-1">
+                    <polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </div>
+
+            <div v-show="!isMobile || skillsDetailsOpen" :class="{'mt-4': isMobile && skillsDetailsOpen}">
+              <div class="grid md:grid-cols-3 gap-6">
+                <div v-for="category in skillsCategories" :key="category.name" 
+                    class="bg-gray-50 p-4 rounded-lg border border-gray-300 hover:shadow-md transition-shadow skills">
+                  
+                  <h4 @click="toggleSkillCategory(category)" 
+                      class="font-bold mb-4 text-gray-900 border-b border-gray-200 pb-2 mb-4 flex justify-between items-center"
+                      :class="{'cursor-pointer': isMobile}">
+                    {{ category.name }}
+                    <svg v-if="isMobile" xmlns="http://www.w3.org/2000/svg" 
+                        class="w-4 h-4 ml-2 transition-transform text-gray-700"
+                        :class="{'transform rotate-180': category.isOpen}">
+                      <polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2"></polyline>
+                    </svg>
+                  </h4>
+                  
+                  <div class="flex flex-wrap gap-2" v-show="!isMobile || category.isOpen">
+                    <span
+                      v-for="skill in category.skills"
+                      :key="skill"
+                      class="bg-green-400 text-gray-800 text-xs font-bold py-1 px-4 rounded-full border border-green-100 hover:shadow-md transition-shadow">
                       {{ skill }}
                     </span>
                   </div>

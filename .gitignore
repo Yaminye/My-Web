@@ -4,7 +4,7 @@ node_modules/
 **/node_modules/
 
 # production
-/client/dist
+/dist
 
 # misc
 .DS_Store

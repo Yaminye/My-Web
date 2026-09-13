@@ -17,7 +17,7 @@
         <!-- Blue gradient header -->
         <div style="background: linear-gradient(to right, #2f80ed, #1c49d9); padding: 2.5rem 1.5rem; text-align: center; color: white;">
           <h3 style="font-size: 1.875rem; font-weight: 600; margin-bottom: 0.5rem;">Yehonatan Yamin</h3>
-          <p style="font-size: 1rem; color: #cbd5e1;">Software Engineering Student at Ben-Gurion University</p>
+          <p style="font-size: 1rem; color: #cbd5e1;">Software Engineering graduate of Ben-Gurion University</p>
         </div>
 
         

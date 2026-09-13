@@ -7,12 +7,12 @@
             Yehonatan Yamin
           </h1>
           <h2 class="text-xl md:text-2xl text-gray-600 mb-6">
-            Software & Information Systems Engineering Student
+            Software & Information Systems Engineer
           </h2>
-          
+
           <p class="text-lg text-gray-700 mb-8 leading-relaxed max-w-xl">
-            Dedicated 4rd year Software & Information Systems Engineering student at Ben Gurion University 
-            with a strong foundation in Full Stack development, machine learning, and software architecture. 
+            Software & Information Systems Engineering graduate of Ben Gurion University
+            with a strong foundation in Full Stack development, machine learning, and software architecture.
             Passionate about creating scalable and efficient solutions to complex problems.
           </p>
           

@@ -25,7 +25,7 @@
                   B.Sc in Software & Information Systems Engineering
                 </h4>
                 <p class="text-lg text-blue-600 font-medium mb-2">Ben-Gurion University</p>
-                <p class="text-gray-700">Starting my 4rd year in 26/10/2025</p>
+                <p class="text-gray-700">Graduated 2026</p>
                 <div class="flex flex-wrap items-center gap-3 mt-3">
                   <div class="px-3 py-1 bg-blue-100 text-blue-800 font-medium rounded-full">
                     GPA: 89

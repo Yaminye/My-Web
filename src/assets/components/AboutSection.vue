@@ -543,6 +543,12 @@ export default {
             description: "Python, Neural Networks, Ensemble Methods, SVM",
             isOpen: false
           },
+          {
+            name: "Big Data & Distributed Systems",
+            grade: 91,
+            description: "SQL, Cassandra, MongoDB, Redis, MapReduce, PySpark, DB recovery, Sharding & Replication",
+            isOpen: false
+          },
                     {
             name: "Data Structures",
             grade: 91,

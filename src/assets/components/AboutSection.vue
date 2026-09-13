@@ -28,10 +28,10 @@
                 <p class="text-gray-700">Graduated 2026</p>
                 <div class="flex flex-wrap items-center gap-3 mt-3">
                   <div class="px-3 py-1 bg-blue-100 text-blue-800 font-medium rounded-full">
-                    GPA: 89
+                    GPA: 91
                   </div>
                   <div class="px-3 py-1 bg-green-100 text-green-800 font-medium rounded-full">
-                    Last semester: 93.3
+                    Last semester: 96
                   </div>
                 </div>
                 

@@ -638,36 +638,6 @@ export default {
         ],
         skills: ["LangChain", "LangGraph", "MCP", "CI/CD", "Jenkins", "Docker", "Python"],
         isOpen: false
-      },
-      {
-        title: "Operations & Property Manager",
-        company: "OurPlace",
-        location: "Tel Aviv, Israel",
-        type: "Full-time",
-        period: "",
-        responsibilities: [
-          "Managed operational aspects of multiple residential buildings, including maintenance, contractor coordination, and budget management",
-          "Served as primary point of contact for American tenants in Israel for internship programs, helping with local procedures and resolving issues",
-          "Led renovation projects and ensured compliance with municipal regulations and safety standards",
-          "Handled a wide range of logistical and operational challenges, often under tight deadlines"
-        ],
-        skills: ["Operational Management", "Client Relations", "Problem Solving", "Project Coordination"],
-        isOpen: false
-      },
-      {
-        title: "Site Supervisor & Quantity Surveyor",
-        company: "Eitam Liad Construction Company",
-        location: "",
-        type: "Part-time",
-        period: "",
-        responsibilities: [
-          "Oversaw construction projects (budgeting, quality, timelines)",
-          "Supervised on-site teams and coordinated with contractors",
-          "Transitioned to part-time role focusing on quantity surveying",
-          "Available to work 3+ days per week"
-        ],
-        skills: ["Project Planning", "Team Leadership", "Budget Management", "Client Communication"],
-        isOpen: false
       }
     ],
     militaryService: [

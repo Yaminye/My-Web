@@ -1,10 +1,10 @@
 <template>
   <div class="app">
     <NavbarComponent :active-section="activeSection" :is-scrolled="isScrolled" />
-    <HomeSection id="home" />
-    <AboutSection id="about" />
-    <ProjectsSection id="projects" />
-    <ContactSection id="contact" />
+    <HomeSection />
+    <AboutSection />
+    <ProjectsSection />
+    <ContactSection />
     <footer class="py-6 text-center text-gray-600">
       <p>© {{ new Date().getFullYear() }} Yehonatan Yamin. All rights reserved.</p>
     </footer>
@@ -43,7 +43,10 @@ export default {
     handleScroll() {
       this.isScrolled = window.scrollY > 50;
 
-      const sections = ['home', 'about', 'projects', 'contact'];
+      const sections = [
+        'home', 'about', 'experience', 'skills', 'military',
+        'volunteering', 'projects', 'contact'
+      ];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {

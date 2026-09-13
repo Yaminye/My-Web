@@ -11,7 +11,7 @@
       
       <div class="space-y-12">
         <!-- Education -->
-        <div class="overflow-hidden border-0 shadow-lg hover:shadow-xl rounded-lg transition-shadow duration-300">
+        <div id="education" class="overflow-hidden border-0 shadow-lg hover:shadow-xl rounded-lg transition-shadow duration-300">
           <div class="bg-gradient-to-r from-gray-900 to-gray-800 py-4 px-6 border-b">
             <div class="flex justify-center items-center gap-3">
               <h3 class="text-xl font-semibold text-black">Education</h3>
@@ -52,7 +52,7 @@
             <!-- Education Details - Hidden on mobile by default, always visible on desktop -->
             <div v-show="!isMobile || educationDetailsOpen"
                 class="grid gap-8"
-                :class="educationCourses.inProgress.length ? 'md:grid-cols-2' : 'md:grid-cols-1'">
+                :class="{ 'md:grid-cols-2': educationCourses.inProgress.length }">
               <div v-if="educationCourses.inProgress.length">
                 <h5 class="flex items-center gap-2 text-lg font-semibold mb-4 text-amber-700">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
@@ -123,7 +123,7 @@
         </div>
 
         <!-- Work Experience -->
-        <div class="overflow-hidden border-0 shadow-lg hover:shadow-xl rounded-lg transition-shadow duration-300">
+        <div id="experience" class="overflow-hidden border-0 shadow-lg hover:shadow-xl rounded-lg transition-shadow duration-300">
           <div class="bg-gradient-to-r from-gray-900 to-gray-800 py-4 px-6 border-b">
             <div class="flex justify-center items-center gap-3">
               <h3 class="text-xl font-semibold text-black">Work Experience</h3>
@@ -203,7 +203,7 @@
         </div>
 
         <!-- Skills -->
-        <div class="overflow-hidden border-0 shadow-lg hover:shadow-xl rounded-lg transition-shadow duration-300">
+        <div id="skills" class="overflow-hidden border-0 shadow-lg hover:shadow-xl rounded-lg transition-shadow duration-300">
           <div class="bg-gradient-to-r from-gray-900 to-gray-800 py-4 px-6 border-b">
             <div class="flex justify-center items-center gap-3">
               <h3 class="text-xl font-semibold text-black">Technical Skills</h3>
@@ -262,7 +262,7 @@
         </div>
 
         <!-- Military Service -->
-        <div class="overflow-hidden border-0 shadow-lg hover:shadow-xl rounded-lg transition-shadow duration-300">
+        <div id="military" class="overflow-hidden border-0 shadow-lg hover:shadow-xl rounded-lg transition-shadow duration-300">
           <div class="bg-gradient-to-r from-gray-900 to-gray-800 py-4 px-6 border-b">
             <div class="flex justify-center items-center gap-3">
               <h3 class="text-xl font-semibold text-black">Military Service</h3>
@@ -397,7 +397,7 @@
         </div>
 
         <!-- Volunteering -->
-        <div class="overflow-hidden border-0 shadow-lg hover:shadow-xl rounded-lg transition-shadow duration-300">
+        <div id="volunteering" class="overflow-hidden border-0 shadow-lg hover:shadow-xl rounded-lg transition-shadow duration-300">
           <div class="bg-gradient-to-r from-gray-900 to-gray-800 py-4 px-6 border-b">
             <div class="flex justify-center items-center gap-3">
               <h3 class="text-xl font-semibold text-black">Volunteering</h3>

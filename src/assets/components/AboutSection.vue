@@ -50,8 +50,10 @@
             </div>
             
             <!-- Education Details - Hidden on mobile by default, always visible on desktop -->
-            <div v-show="!isMobile || educationDetailsOpen" class="grid md:grid-cols-2 gap-8">
-              <div>
+            <div v-show="!isMobile || educationDetailsOpen"
+                class="grid gap-8"
+                :class="educationCourses.inProgress.length ? 'md:grid-cols-2' : 'md:grid-cols-1'">
+              <div v-if="educationCourses.inProgress.length">
                 <h5 class="flex items-center gap-2 text-lg font-semibold mb-4 text-amber-700">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
                     <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
@@ -488,38 +490,13 @@ export default {
       ],
       educationCourses: {
         inProgress: [
+        ],
+        completed: [
           {
-            name: "LangChain and LangGraph by building real world AI Agents",
+            name: "Udemy - LangChain and LangGraph by building real world AI Agents",
             description: "LangChain, LangGraph, RAG, Python, OpenAI API, LangSmith, Ollama",
             isOpen: false
           },
-          {
-            name: "Computer and Network Security",
-            description: "Cryptography, Authentication, Security Protocols, Malicious Code Detection, Firewalls",
-            isOpen: false
-          },
-          {
-            name: "Software Project Management",
-            description: "Agile methodologies, Project lifecycle, Team collaboration",
-            isOpen: false
-          },
-          {
-            name: "Web development environment",
-            description: "RESTful APIs, Node.js, Vue.js, Docker, Cloud services (Azure)",
-            isOpen: false
-          },
-          {
-            name: "Software Engineering Project",
-            description: "Full-cycle software development, team collaboration, Agile practices",
-            isOpen: false
-          },       
-          {
-            name: "Analysis and decision making",
-            description: "Data-driven decisions, statistical analysis, optimization techniques",
-            isOpen: false
-          },
-        ],
-        completed: [
           {
             name: "Data communication",
             grade: 99,

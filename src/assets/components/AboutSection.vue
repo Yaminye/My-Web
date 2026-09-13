@@ -222,7 +222,13 @@
                 <h4 @click="toggleWorkExperience(job)"
                     class="text-xl font-semibold text-gray-900 mb-1 flex justify-between items-center"
                     :class="{'cursor-pointer': isMobile}">
-                  {{ job.title }}
+                  <span class="flex flex-wrap items-center gap-2">
+                    {{ job.title }}
+                    <span v-if="job.type"
+                        class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
+                      {{ job.type }}
+                    </span>
+                  </span>
                   <svg v-if="isMobile" xmlns="http://www.w3.org/2000/svg"
                       class="w-4 h-4 ml-2 transition-transform text-gray-700"
                       :class="{'transform rotate-180': job.isOpen}">
@@ -236,8 +242,6 @@
                     <span v-if="job.period">{{ job.period }}</span>
                     <span v-if="job.period && job.location">·</span>
                     <span v-if="job.location">{{ job.location }}</span>
-                    <span v-if="job.type">·</span>
-                    <span v-if="job.type">{{ job.type }}</span>
                   </div>
                   <ul class="space-y-2 text-gray-700">
                     <li v-for="(item, i) in job.responsibilities" :key="i" class="flex items-start gap-2">
